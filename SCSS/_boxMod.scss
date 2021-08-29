@@ -1,0 +1,15 @@
+$padding:50px;
+$margin:50px;
+.navbar {background-image: url(../ASSETS/IMG/BgNav.jpg);}
+.navbar-expand-lg .navbar-collapse{display: flex;
+    justify-content: flex-end;
+}
+.nav-link {font-weight: bold;}
+.links__footer { display: flex;
+    justify-content: flex-end;
+    align-items: center;}
+.items__footer {list-style-type: none;
+align-items: flex-end;}
+.footer__margin {margin:0%}
+.footer__background {background-image: url(../ASSETS/IMG/BgNav.jpg);}
+.estilo__container {align-items: center; justify-content: space-between;}

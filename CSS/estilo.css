@@ -1,0 +1,164 @@
+.body{
+    background: rgb(213,223,232);
+    background: radial-gradient(circle, rgba(213,223,232,1) 30%, rgba(213,223,232,1) 50%, rgba(201,206,211,1) 80%, rgba(160,149,137,1) 99%);
+}
+.rowflex {
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+}
+.bgBurly{background-color:burlywood}
+.borderBlack{border: 1px solid black}
+/*mover el elemento*/
+.transform{
+    height: 100px;
+    /*transform:translate(50px, 50px)*/ /*mover elemento*/
+    /*transform:rotate(50deg)*/ /*rotar elemento con degrees*/
+    /*transform:scale(1.1,1.1)*/ /*escalar elemento: <1 achica, >1 agranda, numeros negativos, invierte*/
+    /*transform: skew(1deg, 2deg);*/
+    transition: height 2s;
+}
+.transform:hover{
+    height: 500px;
+}
+.icon{
+    transition: all 2s;
+}
+.icon:hover{
+    transform: translateY(-10px);
+}
+input{
+    width: 100px;
+    transition: all 1s;
+}
+input:focus{
+    width: 200px;
+    font-size: 25px;
+}
+@keyframes unEfecto {
+    0%{color:blue;}
+    25%{color:yellow;}
+    50%{color: green;}
+    75%{color: hotpink;}
+    100%{color: indigo;}
+}
+.animacionColor{
+    font-size: 50px;
+    animation-name: unEfecto;
+    animation-duration: 5s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;}
+@media only screen and (min-width: 0px) and (max-width: 767px){
+    .gridContainer{
+        display: grid;
+        grid-template-areas:
+        "header header"
+        "navIzq navDer"
+        "encabezado encabezado"
+        "imgFlex imgFlex"
+        "footer footer";
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 100px 70px auto 1fr 100px;
+    }
+}
+nav ul {
+    position: relative;
+    bottom: 50px;
+    left: 150px;
+}
+article {
+    position: relative;
+    top: 10rem;
+}
+header{
+    grid-area: header; 
+    text-align: justify;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bolder; 
+    font-size: 30px;
+    font-style: initial;
+    border:solid 2px black;
+}
+header nav ul{
+    position: relative;
+    left: -30px;
+    color: darkblue;
+    font-size: 20px;
+    font-style: italic;
+    text-align: left;
+}
+section{
+    color: darkblue; font-size: 20px
+}
+.encabezadoTabla{
+    font-size: 45px;
+    font-family: fantasy;
+    font-weight: bolder;
+    font-style: initial;
+}
+.txtDer{
+    border: solid 1px black;
+    font-size: 150%;
+    font-family:sans-serif;
+    font-weight: bolder;
+    font-style: oblique;
+}
+.txtCen{
+    border: solid 1px black;
+    font-size: 25px;
+    font-family: monospace;
+    font-weight: lighter;
+    font-style: initial;
+    font-variant: small-caps;
+}
+.txtIzq{
+    border: solid 1px black;
+    font-size: unset;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: normal;
+    font-style:normal;
+}
+/*.parallax{
+    background-image: url("../ASSETS/IMG/whiteasari.jpg");
+    height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px 30px;
+    margin-bottom: 50px;
+}*/
+ul {list-style: none;
+    font-size: 0;
+}
+li {display: inline-block;
+    width: 15%;
+    position: relative;
+    font-size: 25px;
+}
+ul ul {position: absolute;
+    display: none;
+    }
+ul ul li {display: block;
+}
+ul li:hover ul {display: block;}
+footer {
+    background: linear-gradient(white, grey);
+    grid-area: footer;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 160px;
+}
+.grid{
+    display:grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100%;
+}
+/*vista desktop*/
+@media only screen and (min-width: 1024px){
+.navbar-expand-lg .navbar-collapse{justify-content: flex-end;}
+}  
+    
+/*vista mobile*/
+@media only screen and (max-width: 767px){}

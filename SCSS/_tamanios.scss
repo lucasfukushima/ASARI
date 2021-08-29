@@ -1,0 +1,13 @@
+$parrafoDesktop:18px;
+$parrafoMobile:20px;
+$h1Desktop:55px;
+$h1Mobile:40px;
+$navBar:22px;
+h1{
+font-size:$h1Desktop;
+@media only screen and (max-width:767px){font-size:$h1Mobile;}
+}
+p{color:$violet;}
+.container-fluid {
+    font-size:$navBar;
+}
